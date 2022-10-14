@@ -24,12 +24,14 @@ class Program
         Console.WriteLine("Wiek nie może być ujemny!");
      } 
         else if (gender == "Kobieta" && currAge < femaleRetireAge)
-     { Console.WriteLine($"Masz {currAge} lat i utożsamiasz się jako {gender}, więc brakuje Ci {currAge - femaleRetireAge} do emerytury!");
+     { Console.WriteLine($"Masz {currAge} lat i jesteś {gender.Remove(gender.Length -1) + "ą"}, więc brakuje Ci {femaleRetireAge - currAge } lat do emerytury!");
      } 
         else if (gender == "Mężczyzna" && currAge < maleRetireAge)
-     { Console.WriteLine($"Masz {currAge} lat i utożsamiasz się jako {gender}, więc brakuje Ci {currAge - maleRetireAge} do emerytury!");
+     { Console.WriteLine($"Masz {currAge} lat i jesteś {gender.Remove(gender.Length -1) + "ą"}, więc brakuje Ci {maleRetireAge - currAge } lat do emerytury!");
      } 
         else {Console.WriteLine("Jesteś emerytem!");
          }
     }
 }
+
+
